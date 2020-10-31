@@ -3,7 +3,7 @@ Requirements
 python-3.6.12
 django-1.11.29
 
-
+Open folder and open cmd then run python manage.py runserver to start the server
 Now open template/index.html
 
 
