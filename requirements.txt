@@ -1,0 +1,9 @@
+Requirements
+
+python-3.6.12
+django-1.11.29
+
+
+Now open template/index.html
+
+
