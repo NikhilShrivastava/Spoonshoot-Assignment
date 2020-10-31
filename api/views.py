@@ -12,8 +12,9 @@ def book_create_view(request):
     form = NewBookForm(request.POST or None)
     if form.is_valid():
         title = request.POST.get('title')
+        author = request.POST.get('author') 
         count = request.POST.get('count')
-        print("Nikhil:", title, count)
+        print("Nikhil:", title,authoor, count)
         form.save()
 
     context = {
@@ -25,8 +26,9 @@ def books_list_view(request):
     form = NewBookForm(request.POST or None)
     if form.is_valid():
         title = request.POST.get('title')
+        author = request.POST.get('author') 
         count = request.POST.get('count')
-        print("Nikhil:", title, count)
+        print("Nikhil:", title, author, count)
         form.save()
         form = NewBookForm()
 
@@ -49,11 +51,4 @@ def book_detail_view(request, my_id):
     context = {'book': obj}
     return render(request, 'book_detail.html', context)
 
-# def search_view(request):
-#     term = request.GET.get('term')
-#     data = []
-#     if term:
-#         items = Item.objects.filter(value__icontains=term).values('value', 'id')
-#         data = json.dumps(items)
 
-#     return HttpResponse(data, content_type='application/json')
