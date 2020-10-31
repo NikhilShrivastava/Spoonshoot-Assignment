@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Books</title>
+<link rel ='stylesheet' href="{ % static '/css/style.css '%}">
+<link rel ='stylesheet' href="{ % static '/css/bootstrap.min.css '%}">
+<body>
+
+<center>
+<h1>Book Details</h1>
+
+<form method="GET">
+    <label for="title">title</label>
+    <input id="title" type="text" value="{{ book.title }}"></input>
+    <input id="author" type ="text" value-"{( book.author)}"</input>
+    <input id="count" type="number" value="{{ book.count }}" min="0"></input>
+    <button type="submit" value="Click" name="update">Update</button>
+    <button type="submit" value="Click" name="delete">Delete</button>
+</form>
+
+</center>
+</body>
+</head>
+</html>
